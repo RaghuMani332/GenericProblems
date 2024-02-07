@@ -1,5 +1,6 @@
 ﻿using Problems;
 using System;
+using System.Collections;
 
 namespace MainMeth
 {
@@ -10,9 +11,9 @@ namespace MainMeth
     {
         public static void Main()
         {
-           
+
             GenericsProblem problem = new GenericsProblem();
-            Console.WriteLine(problem.Max(5, 4, 3));
+            Console.WriteLine(problem.Max<String>("a","b","c"));
         }
 
     }

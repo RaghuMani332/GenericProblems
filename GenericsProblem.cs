@@ -9,10 +9,23 @@ namespace Problems
 {
     class GenericsProblem
     {
-        public String Max(String a,String  b,String c)
+        public T Max<T>(params T[] obj ) where T : IComparable<T>
         {
-            return a.CompareTo(b) > 0 && a.CompareTo(c) > 0 ? a : b.CompareTo(c) > 0 && b.CompareTo(a) > 0 ? b : c;
-         //   return a>b&&a>c?a:b>c&&b>a?b:c;
+            if (obj == null || obj.Length == 0)
+            {
+                Console.WriteLine("invalid arguments");
+                
+            }
+
+            T max = obj[0];
+            for (int i = 1; i < obj.Length; i++)
+            {
+                if (obj[i].CompareTo(max) > 0)
+                {
+                    max = obj[i];
+                }
+            }
+            return max;
 
         }
     }
