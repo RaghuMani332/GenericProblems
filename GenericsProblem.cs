@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,10 @@ namespace Problems
 {
     class GenericsProblem
     {
-        public int Max(int a,int b,int c)
+        public float Max(float a,float b,float c)
         {
             return a>b&&a>c?a:b>c&&b>a?b:c;
+
         }
     }
 }
